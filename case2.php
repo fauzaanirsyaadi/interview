@@ -1,18 +1,14 @@
 <?php
-$array1 = array("sejarah" => "8", "matematika" => "7", "sosiologi"=>"6", "kewarganegaran"=>"9");
-$array2 = array("sejarah" => "5", "matematika" => "8", "sosiologi"=>"9", "kewarganegaran"=>"6");
+$array = array("rudi"=> array("sejarah" => "8", "matematika" => "7", "sosiologi"=>"6", "kewarganegaran"=>"9"), "ani"=>array("sejarah" => "5", "matematika" => "8", "sosiologi"=>"9", "kewarganegaran"=>"6"));
 
-$rudi = 0;
-$ani = 0;
-// $jml=count($array1);
-// echo $jml;
-for ($x = 0; $x < 3; $x++) {
-  if ($array1[$x]>$array2[$x]){
+$rudi;$ani;
+for($i=0;$i<count($array);$i++){
+  if ($array1[$i]>$array2[$i]){
     $rudi = $rudi +1;
-  }elseif ($array1[$x]<$array2[$x]){
+  }elseif ($array1[$i]<$array2[$i]){
     $ani = $ani + 1;
   }else{
-    echo "salah masukan";
+    continue;
   }
 }
 echo "rudi " + $rudi;
